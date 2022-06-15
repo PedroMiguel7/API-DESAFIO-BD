@@ -1,4 +1,4 @@
-module API-DESAFIO-BD
+module "github.com/PedroMiguel7/API-DESAFIO-BD/pkg/common/models"
 
 go 1.18
 

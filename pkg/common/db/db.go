@@ -3,7 +3,7 @@ package db
 import (
     "log"
 
-    "github.com/PedroMIguel7//pkg/common/models"
+    "github.com/PedroMiguel7/API-DESAFIO-BD/pkg/common/models"
     "gorm.io/driver/postgres"
     "gorm.io/gorm"
 )

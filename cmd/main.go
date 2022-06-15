@@ -3,7 +3,7 @@ package main
 import (
     "github.com/gin-gonic/gin"
     "github.com/PedroMiguel7/API-DESAFIO-BD/pkg/books"
-    "github.com/PedroMiguel7/API-DESAFIO-BD/pkg/common/db"
+    "github.com/PedroMiguel7/API-DESAFIO-BD/Pkg/common/db"
     "github.com/spf13/viper"
 )
 
