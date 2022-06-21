@@ -26,8 +26,8 @@ da equipe podem se atribuir.
 
 | Funcionalidade        | Estado |
 | ------------- |:-------------:|
-| Manter equipe      | x |
-| Manter projeto      | x |
+| Manter equipe      | ✔️❤️  |
+| Manter projeto      | ✔️❤️  |
 | Associar equipe a projeto | x | 
 | Criar tarefa no projeto | x | 
 | Atribuir tarefa | x | 
