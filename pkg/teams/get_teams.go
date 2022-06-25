@@ -3,7 +3,7 @@ package equipes
 import (
 	"net/http"
 
-	"github.com/PedroMiguel/GO-ANGULAR-POSTGRE/pkg/common/models"
+	"github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/common/models"
 	"github.com/gin-gonic/gin"
 )
 
