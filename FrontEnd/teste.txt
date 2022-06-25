@@ -1,1 +1,1 @@
-FrontEnd ai
+FrontEnd ai, será feito em angular. 
