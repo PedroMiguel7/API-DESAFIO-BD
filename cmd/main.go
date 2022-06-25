@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/PedroMiguel7/go-gin-api-medium/pkg/people"
-    "github.com/PedroMiguel7/go-gin-api-medium/pkg/teams"
-    "github.com/PedroMiguel7/go-gin-api-medium/pkg/projects"
-    "github.com/PedroMiguel7/go-gin-api-medium/pkg/tasks"
+	"github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/people"
+    "github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/teams"
+    "github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/projects"
+    "github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/tasks"
 	
-	"github.com/PedroMiguel7/go-gin-api-medium/pkg/common/db"
+	"github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/common/db"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 )
@@ -22,9 +22,10 @@ func main() {
     h := db.Init(dbUrl)
 
     
-    people.RegisterRoutes(r, h)
-    projects.RegisterRoutes(r, h)
-    teams.RegisterRoutes(r, h)
+    pessoas.RegisterRoutes(r, h)
+    projetos.RegisterRoutes(r, h)
+    equipes.RegisterRoutes(r, h)
+    tasks.RegisterRoutes(r, h)
     // register more routes here
 
     r.Run(port)

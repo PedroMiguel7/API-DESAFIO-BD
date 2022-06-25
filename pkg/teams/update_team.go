@@ -1,37 +1,36 @@
-package teams
+package equipes
 
 import (
     "net/http"
 
     "github.com/gin-gonic/gin"
-    "github.com/PedroMiguel7/go-gin-api-medium/pkg/common/models"
+    "github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/common/models"
 )
 
-type UpdateTeamRequestBody struct {
-	Name string	`json:"name"`
+type UpdateEquipeRequestBody struct {
+	Nome_Equipe string `json:"nome_equipe"`
 }
 
 func (h handler) UpdateTeam(c *gin.Context) {
-    id := c.Param("id")
-    body := UpdateTeamRequestBody{}
+	id := c.Param("id")
+	body := UpdateEquipeRequestBody{}
 
-    // getting request's body
-    if err := c.BindJSON(&body); err != nil {
-        c.AbortWithError(http.StatusBadRequest, err)
-        return
-    }
+	// getting request's body
+	if err := c.BindJSON(&body); err != nil {
+		c.AbortWithError(http.StatusBadRequest, err)
+		return
+	}
 
-    var team models.Team
+	var equipe models.Equipe
 
-    if result := h.DB.First(&team, id); result.Error != nil {
-        c.AbortWithError(http.StatusNotFound, result.Error)
-        return
-    }
+	if result := h.DB.First(&equipe, id); result.Error != nil {
+		c.AbortWithError(http.StatusNotFound, result.Error)
+		return
+	}
 
-    team.Name = body.Name
+	equipe.Nome_Equipe = body.Nome_Equipe
 
+	h.DB.Save(&equipe)
 
-    h.DB.Save(&team)
-
-    c.JSON(http.StatusOK, &team)
+	c.JSON(http.StatusOK, &equipe)
 }

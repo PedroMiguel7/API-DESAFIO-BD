@@ -1,35 +1,35 @@
-package projects
+package projetos
 
 import (
-    "net/http"
+	"net/http"
 
-    "github.com/gin-gonic/gin"
-    "github.com/PedroMiguel7/go-gin-api-medium/pkg/common/models"
+	"github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/common/models"
+	"github.com/gin-gonic/gin"
 )
 
-type AddProjectRequestBody struct {
-    Title  string  `json:"title"`
-    Description string  `json:"Description"`
+type AddProjetoRequestBody struct {
+	Nome_Projeto	string 			`gorm:"type: varchar(30) not null" json:"nome_projeto"`
+	Equipe 			models.Equipe	`gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;" json:"equipe"`
 }
 
 func (h handler) AddProject(c *gin.Context) {
-    body := AddProjectRequestBody{}
+	body := AddProjetoRequestBody{}
 
-    // getting request's body
-    if err := c.BindJSON(&body); err != nil {
-        c.AbortWithError(http.StatusBadRequest, err)
-        return
-    }
+	// getting request's body
+	if err := c.BindJSON(&body); err != nil {
+		c.AbortWithError(http.StatusBadRequest, err)
+		return
+	}
 
-    var project models.Project
+	var projeto models.Projeto
 
-    project.Title = body.Title
-    project.Description = body.Description
+	projeto.Nome_Projeto = body.Nome_Projeto
+	projeto.Equipe = body.Equipe
 
-    if result := h.DB.Create(&project); result.Error != nil {
-        c.AbortWithError(http.StatusNotFound, result.Error)
-        return
-    }
+	if result := h.DB.Create(&projeto); result.Error != nil {
+		c.AbortWithError(http.StatusNotFound, result.Error)
+		return
+	}
 
-    c.JSON(http.StatusCreated, &project)
+	c.JSON(http.StatusCreated, &projeto)
 }

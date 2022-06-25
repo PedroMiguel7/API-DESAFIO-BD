@@ -3,7 +3,7 @@ package db
 import (
     "log"
 
-    "github.com/PedroMiguel7/go-gin-api-medium/pkg/common/models"
+    "github.com/PedroMiguel7/GO-ANGULAR-POSTGRE/pkg/common/models"
     "gorm.io/driver/postgres"
     "gorm.io/gorm"
 )
@@ -15,9 +15,9 @@ func Init(url string) *gorm.DB {
         log.Fatalln(err)
     }
 
-    db.AutoMigrate(&models.Person{})
-    db.AutoMigrate(&models.Project{})
-    db.AutoMigrate(&models.Team{})
+    db.AutoMigrate(&models.Pessoa{})
+    db.AutoMigrate(&models.Projeto{})
+    db.AutoMigrate(&models.Equipe{})
     db.AutoMigrate(&models.Task{})
     return db
 }

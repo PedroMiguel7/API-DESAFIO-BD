@@ -17,17 +17,17 @@ da equipe podem se atribuir.
 
 
 ## Membros:
-<div>-<a href="https://github.com/caiosousaf"> Caio Sousa:</a>  Desenvolvimento dos metódos GET, POST, PUT e DELETE, mais conexão com o Banco de dados, desenvolvimento do swagger e da documentação da API.</div>
-<div>-<a href="https://github.com/PedroMiguel7"> Pedro Miguel:</a>  Desenvolvimento dos metódos GET, POST, PUT e DELETE</div> 
+<div>-<a href="https://github.com/caiosousaf"> Caio Sousa:</a>  Desenvolvimento dos metódos GET, POST, PUT e DELETE, mais conexão com o Banco de dados, desenvolvimento do swagger.</div>
+<div>-<a href="https://github.com/PedroMiguel7"> Pedro Miguel:</a>  Desenvolvimento dos metódos GET, POST, PUT e DELETE, </div> 
 <div>-<a href="https://github.com/dayannebugarim"> Dayanne Bugarim:</a> Desenvolvimento do FrontEnd</div>
 
 
 ## Andamento do projeto
 
-| Funcionalidade        | Estado |
+| Funcionalidade         | Estado |
 | ------------- |:-------------:|
-| Manter equipe      | ✔️❤️  |
-| Manter projeto      | ✔️❤️  |
+| Manter equipe      | ✔️❤️ |
+| Manter projeto      | ✔️❤️ |
 | Associar equipe a projeto | x | 
 | Criar tarefa no projeto | x | 
 | Atribuir tarefa | x | 
